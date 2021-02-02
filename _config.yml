@@ -1,3 +1,8 @@
-title: Résumé Title
-baseurl: "/resume/"
-theme: "jekyll-theme-minimal-resume"
+theme: dev-portfolio-blog
+resume_url: ""
+author_name: "Wooseok Choi"
+description: "I'm a dude"
+url: https://wooseokyourself.github.io/
+google_analytics: 
+disqus:
+    shortname: "wooseokyourself"
