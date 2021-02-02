@@ -2,13 +2,19 @@
 layout: post
 comments: true
 title: Darknet for YOLO Tutorials - Data Processing, Training, and Validation.
-categories: [Machine Learning, Object Detection, YOLO]
+categories: ["Object Detection Camera"]
 ---
 # Description
-Object Detection 알고리즘인 YOLO의 모델을 Darknet 프레임워크에서 학습하고 모델의 성능을 평가하는 과정을 담았다.   
-[AlexeyAB's Darknet](https://github.com/AlexeyAB/darknet)
+1. Training YOLO Models
+2. Detection Mode Configuration 
+3. Admin Mode Configuration
 
-# Data Processing
+# Training YOLO Models
+## Stack
++ Used [AlexeyAB's Darknet](https://github.com/AlexeyAB/darknet) for deep learning framework.
++ Used [YOLOv4](https://arxiv.org/abs/2004.10934) object detection network.
+
+## Data Processing
 Darknet 에서의 학습을 위해 아래와 같은 구조의 데이터셋을 먼저 구성해야 한다.
 
 ```
@@ -26,3 +32,12 @@ mydata
 ├── train.txt
 └── valid.txt
 ```
+
+# Detection Mode Configuration
+## Stack
++ Used Raspberry Pi 4B as a device with Raspberry Pi OS.
++ Used CAT.M1 as a modem.
++ Used OpenCV 4 for taking picture and image processing.
++ C++ based.
+
+# Admin Mode Configuration
