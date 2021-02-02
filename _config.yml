@@ -1,7 +1,7 @@
 title: Wooseok Choi
 email: 21500740@handong.edu
 
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/wooseokyourself.github.io" # the subpath of your site, e.g. /blog
 url: "https://wooseokyourself.github.io"
 
 # Build settings
