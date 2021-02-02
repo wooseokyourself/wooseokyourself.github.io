@@ -35,6 +35,7 @@ body {
   max-width: 650px;
   height: 100vh;
   margin: auto;
+  font-family: "Inconsolata";
   font-size: 1.0rem;
   @include mediaQuery(phone-width) {
     font-size: 0.5 rem;
@@ -51,7 +52,7 @@ body {
   width: 80%;
   margin: 0 auto;
   display: flex;
-
+  font-family: "Inconsolata";
   @include mediaQuery(phone-width) {
     width: 60%;
     min-width: 270px;
@@ -61,8 +62,10 @@ body {
   width: 50%;
   text-align: right;
   padding-right: 20px;
+  font-family: "Inconsolata";
 }
 .nav-link {
+  font-family: "Inconsolata";
   ul {
     padding-inline-start: 0;
   }
@@ -94,6 +97,7 @@ body {
   width: 60%;
   margin: 0 auto;
   margin-top: 50px;
+  font-family: "Inconsolata";
   @include mediaQuery(tablet-width) {
     width: 70%;
   }
@@ -171,14 +175,17 @@ body {
   color: var(--primary-text-color);
   border-radius: 5px;
   border: 0;
+  font-family: "Inconsolata";
 }
 
 .post-categories {
   text-align: right;
+  font-family: "Inconsolata";
 }
 .blog-list {
   list-style: none;
   padding-left: 0;
+  font-family: "Inconsolata";
   li {
     margin-bottom: 50px;
     .excerpt {
@@ -196,6 +203,7 @@ body {
   }
 }
 .blogPage-categoryList {
+  font-family: "Inconsolata";
   ul {
     list-style-type: none;
     display: flex;
@@ -213,6 +221,7 @@ body {
 
 //custom md tags styles
 div.highlight {
+  font-family: "Inconsolata";
   background: var(--primary-highlight-color);
   padding: 5px;
   border-radius: 5px;
