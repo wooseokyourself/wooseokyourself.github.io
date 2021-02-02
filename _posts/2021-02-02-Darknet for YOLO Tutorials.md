@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 comments: true
 title: Darknet for YOLO Tutorials - Data Processing, Training, and Validation.
 categories: [Machine Learning, Object Detection, YOLO]
