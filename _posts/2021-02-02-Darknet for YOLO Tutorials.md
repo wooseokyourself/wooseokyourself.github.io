@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title: Darknet for YOLO Tutorials - Data Processing, Training, and Validation.
-categories: ["Object Detection Camera"]
+title: Object Detection Camera
+categories: ["PROJECTS"]
 ---
 # Description
 1. Training YOLO Models
