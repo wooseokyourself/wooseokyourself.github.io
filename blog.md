@@ -1,5 +1,7 @@
+---
 layout: blog
 permalink: /blog/
-title: [Blog Page Title]
+title: Rohit Jain | Blog
 pagination:
   enabled: true
+---

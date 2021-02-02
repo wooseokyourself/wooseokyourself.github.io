@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     activesupport (5.2.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -25,6 +26,8 @@ GEM
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
+    ethon (0.12.0)
+      ffi (>= 1.3.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
     extras (0.3.0)
@@ -32,6 +35,14 @@ GEM
     fastimage (2.2.2)
     ffi (1.14.2)
     forwardable-extended (2.6.0)
+    html-proofer (3.18.5)
+      addressable (~> 2.3)
+      mercenary (~> 0.3)
+      nokogumbo (~> 2.0)
+      parallel (~> 1.3)
+      rainbow (~> 3.0)
+      typhoeus (~> 1.3)
+      yell (~> 2.0)
     htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
@@ -98,11 +109,15 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.1-x86_64-darwin)
       racc (~> 1.4)
+    nokogumbo (2.0.4)
+      nokogiri (~> 1.8, >= 1.8.4)
+    parallel (1.20.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
     racc (1.5.2)
     rack (2.2.3)
+    rainbow (3.0.0)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -117,16 +132,20 @@ GEM
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     thread_safe (0.3.6)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    yell (2.2.2)
 
 PLATFORMS
   universal-darwin-20
 
 DEPENDENCIES
   dev-portfolio-blog
+  html-proofer
 
 BUNDLED WITH
    2.2.7
