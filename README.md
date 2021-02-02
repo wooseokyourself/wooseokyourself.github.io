@@ -1,35 +1,128 @@
-[![](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/wild-flame)
+# AP  [![Build Status](https://travis-ci.org/kssim/ap.svg?branch=master)](https://travis-ci.org/kssim/ap.svg?branch=master)
+"AP" is [Jekyll](https://jekyllrb.com/) theme for career. This theme is free and open-source.  
+Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few new features:  
+* SNS Link
+* Google Analytics
+* Responsive design
+* Upgrading awesome fonts and modifying some layouts.
+* Use "About" as main.
+  * It can be written in simple resume form.
+* Change "Post" to "Project Portfolio"
+  * You can manage your project experience just like running a blog.
 
-# jekyll-simple
 
-## simple
-simple is a theme designed for blogger using static site generator like jekyll, Hexo etc.
+# Preview
+[![AP Screenshot](https://github.com/kssim/ap/blob/master/screenshot.png?raw=true)](https://kssim.github.io/ap/)
 
-Especially for those who writes in both Chinese and English. The font-type setting looks really good when writers use Chinese mixed with English.
 
-Supposedly, this could work with Japanese as well but never had a chance to try.
+# Usage
+1. Fork and clone the AP repo:
+    * git clone https://github.com/kssim/ap.git
+2. Install Jekyll:
+    * gem install jekyll
+3. Install the theme's dependencies
+    * bundle install
+4. Customize the theme
+    * update _config.yml
+5. Run the Jekyll server
+    * jekyll serve
 
-## Story behind this theme
 
-It has been long that using font with Chinese in web was a tedious and time-consuming work. It would be almost impossible to make different OS or devices to look the same.
+## Structure
+* Here are the main files of the template
+```bash
+ap
+├── _includes                  # theme includes
+├── _layouts                   # theme layouts (see below for details)
+├── _posts                     # Project & Portfolio posts
+├── _sass                      # Sass partials 
+├── portfolio                  # Main page for "portfolio"
+├── assets
+|  ├── css                     # font-awesome and main css
+|  ├── fonts                   # Font-Awesome
+|  ├── favicon.ico             # Favicon
+|  └── img                     # Images used for "about" page
+├── _config.yml                # sample configuration
+└── index.md                   # Resume to show on "about" page
+```
 
-iOS 9 has pulished some new fonts in Chinese and I decided to make one theme that looks good on iOS devices, at the same time, making it acceptable on computers using other fonts.
+## Configure AP
+Open _config.yml in a text editor to change most of the blog's settings.
 
-So mobile goes first, then the macOS.
 
-## ^-^
+### Site Configuration
+Configure Jekyll as your own blog or with a subpath in in _config.yml:  
+```yml
+title: [Website Title]
+baseurl: [Website Subpath]
+url: [Github Page Url]
+google_analytics: [Google Analytics Tracking ID]
+```
+Please configure this before using the theme.  
+And to enable Google Analytics, add your [Traking ID](https://support.google.com/analytics/answer/1008080?visit_id=1-636579797402349951-2693679291&rd=1)
 
-You can click the button [Say Thanks!](https://saythanks.io/to/wild-flame) at the first of README if you use/like my project. :D
 
-Thanks you guys, I got a lot of thanks from people.
 
-- [ryan](https://saythanks.io/note/a9a342ba-e9aa-4707-b169-05b6ae49757d)
-- [Daniel Moore](https://saythanks.io/note/da81706c-8884-4dbc-89b0-eed242ac3b19) and feel free to visit his work [border quiz](http://danielmoore.us/borders-quiz?singapore-planning-areas)
-- [David Laing](https://saythanks.io/note/fb5d24eb-3be8-4f92-842b-c6dd7ce4c239)
-- [Meg](https://saythanks.io/note/6d56e228-e17c-4641-9524-9f9fd6205068)
+### About You
+Meta variables hold basic information about your profile and resume.  
+Change these variables in _config.yml:  
+```yml
+author:
+  name: [Your Name]
+  desc: [Short introduction]
+  email: [Your E-Mail Address]
+  selfie: [Your Avatar]
+```
+Please configure this before using the theme.
 
-![image](https://user-images.githubusercontent.com/4491950/53502929-0d375880-3aea-11e9-9ce1-13eba2ec4643.png)
 
-- And more
 
-![image](https://user-images.githubusercontent.com/4491950/53502875-e1b46e00-3ae9-11e9-97e4-d70d038a36e9.png)
+### SNS Information
+Your SNS information to display at the bottom of the page.  
+All values except "email" are text values.  
+```yml
+social:
+  email: true
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  github: 
+  google_plus:
+  instagram:
+  keybase:
+  linkedin:
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:
+  steam:
+  tumblr:
+  gitlab:
+  twitter: 
+  vimeo:
+  wordpress:
+  youtube:
+  default_txt: "Follow On"
+```
+
+
+## Portfolio Schema
+```markdown
+---
+layout: post
+title:  [Project title to show in portfolio list]
+info: [A brief introduction to show in portfolio list]
+tech: [The technologies used in the project to show in portfolio list]
+type: [Property of the project to be displayed in front of the project's info(toy or company name)]
+---
+```
+
+## Other formats
+It uses the markdown syntax by default, and there is no format other than the one mentioned above.  
+You can use it as you like.  
+
+
+## License
+[The MIT License (MIT)](https://raw.githubusercontent.com/kssim/ap/master/LICENSE)
