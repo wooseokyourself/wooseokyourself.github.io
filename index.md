@@ -1,8 +1,5 @@
 ---
-layout: frontpage
+layout: home
+home_text: Hey, I think you stole my dog - John Wick
+title: Rohit Jain
 ---
-
-## Welcome to my website
-
-This is the place where I share my ideas on topics like [Paracraft](http://www.paracraft.cn) software design, artificial intelligence and education. 
-Feel free to send me emails or join our team. 
