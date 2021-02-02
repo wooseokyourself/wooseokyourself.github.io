@@ -18,7 +18,7 @@ layout: description
   {% endfor %}
 </div>
 
-{% if page.comments %}
+{% if site.disqus.shortname and page.comments %}
   <hr>
-  {% include utterances.html %}
+  {% include disqus_comments.html %}
 {% endif %}

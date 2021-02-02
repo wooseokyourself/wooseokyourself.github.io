@@ -1,7 +1,8 @@
 ---
 layout: blog
 permalink: /blog/
-title: Wooseok Choi | Blog
+title: Rohit Jain | Blog
 pagination:
   enabled: true
 ---
+
