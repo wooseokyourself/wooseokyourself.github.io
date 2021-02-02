@@ -1,14 +1,14 @@
-title: Rohit Jain
-email: rohitjain18005@gmail.com
+title: Wooseok Choi
+email: 21500740@handong.edu
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://therohitjain.com"
+url: "https://wooseokyourself.github.io"
 
 # Build settings
 markdown: kramdown
 theme: dev-portfolio-blog
 resume_url: "Resume.pdf"
-author_name: Rohit Jain
+author_name: Wooseok Choi
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
