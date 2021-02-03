@@ -9,6 +9,8 @@ categories: ["PROJECTS"]
 2. Detection Mode Configuration 
 3. Admin Mode Configuration
 
+------------------
+
 # Training YOLO Models
 ## Stack
 + Used [AlexeyAB's Darknet](https://github.com/AlexeyAB/darknet) for deep learning framework.
@@ -33,11 +35,15 @@ mydata
 └── valid.txt
 ```
 
+------------------
+
 # Detection Mode Configuration
 ## Stack
 + Used Raspberry Pi 4B as a device with Raspberry Pi OS.
 + Used CAT.M1 as a modem.
 + Used OpenCV 4 for taking picture and image processing.
 + C++ based.
+
+------------------
 
 # Admin Mode Configuration
