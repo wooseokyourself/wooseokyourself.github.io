@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+use_math: true # mathjax
 title : Emojis list
 # categories: ["PROJECTS"] 여기 주석 해제 후 작성
 ---

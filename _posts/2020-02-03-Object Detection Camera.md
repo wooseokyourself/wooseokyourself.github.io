@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+use_math: true
 title: Object Detection Camera
 categories: ["PROJECTS"]
 ---
