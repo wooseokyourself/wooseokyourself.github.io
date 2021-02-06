@@ -1,11 +1,14 @@
 ---
 layout: post
 comments: true
+use_math: true
 title: Indoor Passer Counter using Image Processing
 categories: ["PROJECTS"]
 ---
 
-**아직 작성중이라능!**
+**아직 작성중이라능!**   
+
+This formula $f(x) = x^2$ is an example.
 
 ## Description
 *2019. 09 ~ 2019. 12*   
