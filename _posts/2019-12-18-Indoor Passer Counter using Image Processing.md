@@ -18,8 +18,7 @@ categories: ["PROJECTS"]
 **수행기간: *2019. 09 ~ 2019. 12***   
    
 <!-- 데모동영상 -->
-<!--{% include youtube.html id=Qzbkb-v91pE %}{: .center}    -->
-{% youtube https://www.youtube.com/watch?v=Qzbkb-v91pE %}
+{% include youtube.html id="Qzbkb-v91pE" %}{: .center}
    
 *본 프로젝트는 실내의 일직선상의 통로에서 특정 방향으로 지나간 사람의 수를 세는 프로젝트로서, 본 프로그램이 임베드된 라즈베리파이와 카메라모듈을 건물 천장에 부착하여 사용하도록 고안되었다.*
 
