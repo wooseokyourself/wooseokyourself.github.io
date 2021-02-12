@@ -9,3 +9,8 @@ layout: description
   <hr>
   {% include utterances.html %}
 {% endif %}
+
+{% if site.disqus.shortname and page.comments %}
+  <hr>
+  {% include disqus_comments.html %}
+{% endif %}
