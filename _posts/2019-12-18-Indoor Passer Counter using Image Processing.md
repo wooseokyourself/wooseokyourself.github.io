@@ -8,13 +8,13 @@ categories: ["PROJECTS"]
 
 **아직 작성중이라능!**   
 
-## Contents
+# Contents
 1. Description
 2. Conceptual Design
 
 ------------------
 
-## 1. Description
+# 1. Description
 **수행기간: *2019. 09 ~ 2019. 12***   
    
 <!-- 데모동영상 -->
@@ -22,7 +22,7 @@ categories: ["PROJECTS"]
    
 *본 프로젝트는 실내의 일직선상의 통로에서 특정 방향으로 지나간 사람의 수를 세는 프로젝트로서, 본 프로그램이 임베드된 라즈베리파이와 카메라모듈을 건물 천장에 부착하여 사용하도록 고안되었다.*
 
-### Stack
+## Stack
 + Raspberry Pi
 + OpenCV
 + C++ 
@@ -30,7 +30,7 @@ categories: ["PROJECTS"]
 ------------------
 
 
-## 2. Conceptual Design
+# 2. Conceptual Design
 
 제약사항은 다음과 같았다.
 + 라즈베리파이 사용 및 엣지 컴퓨팅 (저전력, 저비용)
@@ -51,16 +51,16 @@ categories: ["PROJECTS"]
    
    
 
-## 3. Implementation
+# 3. Implementation
 
-### 3.1. Detecting
+## 3.1. Detecting
 
-#### 3.1.1. Background Subtraction
+### 3.1.1. Background Subtraction
 차영상(Background subtraction) 기법이란, 이전 프레임과 현재 프레임간의 픽셀값 차이를 이용하여 일정 임계값 이상 변화를 보인 픽셀(Foreground)과 그렇지 않은 픽셀(Background)들을 이진으로 분류하는 기법이다. 이를 이용하면 고정된 카메라로 촬영하는 영상 속에서 물체의 움직임을 감지할 수 있게 된다. 나는 영상에서 사람의 움직임을 포착하기 위해 이를 적용하였다. 아래 이미지의 우측은 차영상을 통해 배경(검정색)과 움직이는 물체(흰색)을 분리한 예시이다. 흰 색의 덩어리를 "Blob" 이라고 정의하였다.   
    
 ![image]({{"/assets/images/2019-12-18-3.png"| relative_url}}){: width="100%" height="100%"}{: .center}   
    
-##### 문제 1. 사람이 아닌 물체, 혹은 빛에 의한 노이즈로부터 어떻게 사람을 구분할 것인가?
+#### 문제 1. 사람이 아닌 물체, 혹은 빛에 의한 노이즈로부터 어떻게 사람을 구분할 것인가?
 하나의 Blob의 크기가 사람 한 명 정도의 크기인지 아닌지를 통해 사람여부를 결정하였다. 이렇게 해야 할 경우 존재하는 몇 가지 문제점은 다음과 같다.
 
 1. 영상 내에서 사람의 크기는 카메라가 설치된 높이에 따라 천차만별이므로 고정된 값으로 정의할 수 없다.
@@ -70,11 +70,11 @@ categories: ["PROJECTS"]
 
 
 
-##### 문제 2. 설치장소 혹은 빛의 변화(태양광)에 따라 노이즈의 강도가 달라지는 건 어떻게 자동화 할 것인가?
+#### 문제 2. 설치장소 혹은 빛의 변화(태양광)에 따라 노이즈의 강도가 달라지는 건 어떻게 자동화 할 것인가?
 
-### 3.2. Tracking & Counting
+## 3.2. Tracking & Counting
 
-### 3.3. UML
+## 3.3. UML
 
 
 
