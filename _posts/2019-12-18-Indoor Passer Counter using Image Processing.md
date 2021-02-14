@@ -68,20 +68,32 @@ categories: ["PROJECTS"]
 1. MOG2의 파라미터 조정
 API 적인 측면에서 내가 조정할 수 있는 파라미터는 이하의 두 가지가 존재했다. 각 파라미터를 결정하게 된 경위도 함께 기술하였다.   
 
-+ ```history: int```   
+```c++
+int history
+```
 *현재 프레임에서 움직이는 물체를 검출할 때, 최대 몇 프레임 이전의 것까지 활용할 것인지를 결정 (즉, 프레임 수)*   
 ![image]({{"/assets/images/2019-12-18-4.png"| relative_url}}){: width="100%" height="100%"}{: .center}   
 
 위 이미지에서 볼 수 있듯 본 파라미터는 일정 값이 넘어가면 결과에 차이를 주지 않았다. 그리고 후술할 노이즈제거 및 후처리의 단계를 수행하기 때문에, 1로 설정하였다.
 
 
-+ ```varThreshold: double```   
+```c++
+double varThreshold
+```
 *어느 정도의 변화까지를 움직인 픽셀로 볼 것인지를 결정하는 임계값*   
 ![image]({{"/assets/images/2019-12-18-5.png"| relative_url}}){: width="100%" height="100%"}{: .center}   
 
 본 파라미터는 카메라가 설치된 곳의 조명, 그림자여부 등에 따라서 결과가 극명하게 바뀌었고, 이때문에 카메라를 설치한 장소마다 (혹은 테스트영상마다) 이 파라미터를 새로 조정해줘야 하는 문제가 있었다. 이를 위해 "설치 단계"를 본 프로젝트의 전체 시나리오에 새로 추가했으며, 이 단계에서 경사 하강법을 이용하여 최적의 파라미터를 찾도록 구현했다.
 ![image]({{"/assets/images/2019-12-18-6.png"| relative_url}}){: width="100%" height="100%"}{: .center}   
-위 이미지에서 사람을 감싸는 연두색 박스를 ROI(Rectangular region of Interest)라고 지칭하자.
+위 이미지에서 사람을 감싸는 연두색 박스를 ROI(Rectangular region of Interest)라고 지칭하자. 후술하겠지만 이 ROI는 본 프로그램이 사람을 검출하면 그 위치를 나타내는 객체로서 다뤄지는데, 이를 통해 다음 두 가지 변수를 정의할 수 있다.   
+
+```subtract```: 전체 프레임의 Foreground 픽셀 수 - ROI 내의 Foreground 픽셀 수   
+> 즉 subtract가 0에 수렴할수록 노이즈가 없는 깨끗한 상태이다.   
+
+```inbox_ratio```: ROI의 전체 픽셀 수 - ROI 내의 Foreground 픽셀 수   
+> 즉 inbox_ratio가 1에 수렴할수록 ROI가 사람을 fit하게 잘 잡은 것이다.   
+
+
 
 
 2. 차영상 적용 후 노이즈제거를 위한 후처리
